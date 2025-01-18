@@ -15,7 +15,7 @@ public class Venta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Autoincremental
 	
 	@Column(name= "ID_Venta")
-	private long idVenta;
+	private long id;
 	@Column(name = "Nombre_Cliente")
 	private String nombreCliente;
 	@Column(name = "FechaVenta")
@@ -35,7 +35,7 @@ public class Venta {
 	public Venta(long idVenta, String nombreCliente, LocalDateTime createdAt, Integer montoTotal, String estado,
 			String metodoDePago) {
 		this();
-		this.idVenta = idVenta;
+		this.id = id;
 		this.nombreCliente = nombreCliente;
 		this.createdAt = createdAt;
 		this.montoTotal = montoTotal;
@@ -44,11 +44,11 @@ public class Venta {
 	}
 
 	public long getIdVenta() {
-		return idVenta;
+		return id;
 	}
 
-	public void setIdVenta(long idVenta) {
-		this.idVenta = idVenta;
+	public void setIdVenta(long id) {
+		this.id = id;
 	}
 
 	public String getNombreCliente() {
